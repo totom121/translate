@@ -336,24 +336,189 @@ class DamosTranslatorApp:
             }
 
 
+def print_supported_languages():
+    """Print all supported languages with descriptions."""
+    print("🌍 Supported Languages for DAMOS Translation")
+    print("=" * 50)
+    print()
+    
+    languages = {
+        'auto': {
+            'name': 'Auto-Detection',
+            'description': 'Automatically detect the source language',
+            'flag': '🔍',
+            'coverage': 'N/A'
+        },
+        'german': {
+            'name': 'German',
+            'description': 'Comprehensive automotive dictionary with 500+ terms',
+            'flag': '🇩🇪',
+            'coverage': 'Excellent'
+        },
+        'french': {
+            'name': 'French',
+            'description': 'Basic automotive terminology support',
+            'flag': '🇫🇷',
+            'coverage': 'Good'
+        },
+        'italian': {
+            'name': 'Italian',
+            'description': 'Basic automotive terminology support',
+            'flag': '🇮🇹',
+            'coverage': 'Good'
+        },
+        'spanish': {
+            'name': 'Spanish',
+            'description': 'Basic automotive terminology support',
+            'flag': '🇪🇸',
+            'coverage': 'Good'
+        }
+    }
+    
+    for code, info in languages.items():
+        print(f"{info['flag']} {info['name']} ({code})")
+        print(f"   {info['description']}")
+        print(f"   Coverage: {info['coverage']}")
+        print()
+    
+    print("Usage examples:")
+    print("  python translate_damos.py file.dam -l auto      # Auto-detect language")
+    print("  python translate_damos.py file.dam -l german    # Force German")
+    print("  python translate_damos.py file.dam -l french    # Force French")
+    print("  python translate_damos.py file.dam -l italian   # Force Italian")
+    print("  python translate_damos.py file.dam -l spanish   # Force Spanish")
+    print("  python translate_damos.py file.dam --interactive # Interactive selection")
+
+
+def interactive_language_selection():
+    """Interactive language selection with preview."""
+    print("\n🌍 Interactive Language Selection")
+    print("=" * 40)
+    
+    languages = [
+        ('auto', '🔍 Auto-Detection', 'Let the system detect the language automatically'),
+        ('german', '🇩🇪 German', 'Comprehensive automotive dictionary (500+ terms)'),
+        ('french', '🇫🇷 French', 'Basic automotive terminology support'),
+        ('italian', '🇮🇹 Italian', 'Basic automotive terminology support'),
+        ('spanish', '🇪🇸 Spanish', 'Basic automotive terminology support')
+    ]
+    
+    print("\nAvailable languages:")
+    for i, (code, name, desc) in enumerate(languages, 1):
+        print(f"  {i}. {name}")
+        print(f"     {desc}")
+        print()
+    
+    while True:
+        try:
+            choice = input("Select language (1-5) or 'q' to quit: ").strip().lower()
+            
+            if choice == 'q':
+                return None
+            
+            choice_num = int(choice)
+            if 1 <= choice_num <= len(languages):
+                selected_code, selected_name, selected_desc = languages[choice_num - 1]
+                
+                print(f"\n✅ Selected: {selected_name}")
+                print(f"   {selected_desc}")
+                
+                # Show preview for non-auto languages
+                if selected_code != 'auto':
+                    show_language_preview(selected_code)
+                
+                confirm = input("\nConfirm selection? (y/n): ").strip().lower()
+                if confirm in ['y', 'yes']:
+                    return selected_code
+                else:
+                    print("\nPlease select again:")
+                    continue
+            else:
+                print("❌ Invalid choice. Please select 1-5.")
+                
+        except ValueError:
+            print("❌ Invalid input. Please enter a number 1-5 or 'q' to quit.")
+        except KeyboardInterrupt:
+            print("\n\n⏹️ Selection cancelled.")
+            return None
+
+
+def show_language_preview(language_code):
+    """Show a preview of automotive terms for the selected language."""
+    try:
+        from .automotive_dictionary import AutomotiveDictionary
+        
+        auto_dict = AutomotiveDictionary()
+        
+        if language_code not in auto_dict.get_available_languages():
+            print(f"   ⚠️ Dictionary for {language_code} not fully loaded")
+            return
+        
+        # Get some sample terms
+        dictionary = auto_dict.dictionaries[language_code]
+        automotive_terms = dictionary.get('automotive_terms', {})
+        
+        if automotive_terms:
+            print(f"\n📚 Sample automotive terms in {language_code.title()}:")
+            
+            # Show first 5 terms as examples
+            sample_terms = list(automotive_terms.items())[:5]
+            for original, translation in sample_terms:
+                print(f"   • {original} → {translation}")
+            
+            stats = auto_dict.get_dictionary_stats(language_code)
+            print(f"\n📊 Dictionary contains {stats['total_entries']} total entries")
+        else:
+            print(f"   ⚠️ No automotive terms loaded for {language_code}")
+            
+    except Exception as e:
+        print(f"   ⚠️ Could not load dictionary preview: {e}")
+
+
 def main():
     """Command-line interface for the DAMOS translator."""
     parser = argparse.ArgumentParser(description='Translate DAMOS files from any language to English')
     
-    parser.add_argument('input', help='Input DAMOS file or directory')
+    parser.add_argument('input', nargs='?', help='Input DAMOS file or directory')
     parser.add_argument('-o', '--output', help='Output file or directory')
-    parser.add_argument('-l', '--language', help='Source language (auto-detected if not specified)')
+    parser.add_argument('-l', '--language', 
+                       choices=['auto', 'german', 'french', 'italian', 'spanish'],
+                       default='auto',
+                       help='Source language: auto (auto-detect), german, french, italian, spanish (default: auto)')
     parser.add_argument('--batch', action='store_true', help='Process directory in batch mode')
     parser.add_argument('--pattern', default='*.dam', help='File pattern for batch mode (default: *.dam)')
     parser.add_argument('--no-report', action='store_true', help='Skip creating translation report')
     parser.add_argument('--validate', help='Validate translated file against original')
     parser.add_argument('--log-level', default='INFO', choices=['DEBUG', 'INFO', 'WARNING', 'ERROR'],
                        help='Logging level (default: INFO)')
+    parser.add_argument('--list-languages', action='store_true', 
+                       help='List all supported languages and exit')
+    parser.add_argument('--interactive', action='store_true',
+                       help='Interactive mode for language selection')
     
     args = parser.parse_args()
     
+    # Handle special commands first
+    if args.list_languages:
+        print_supported_languages()
+        return 0
+    
     # Initialize translator app
     app = DamosTranslatorApp(log_level=args.log_level)
+    
+    # Handle interactive language selection
+    if args.interactive:
+        args.language = interactive_language_selection()
+        if args.language is None:
+            print("Language selection cancelled.")
+            return 1
+    
+    # Check if input is required but not provided
+    if not args.input and not args.list_languages:
+        parser.error("Input file or directory is required unless using --list-languages")
+    
+    # Convert 'auto' to None for auto-detection
+    source_language = None if args.language == 'auto' else args.language
     
     try:
         if args.validate:
@@ -373,7 +538,7 @@ def main():
             results = app.translate_batch(
                 args.input, 
                 args.output, 
-                args.language, 
+                source_language, 
                 args.pattern
             )
             
@@ -387,7 +552,7 @@ def main():
             result = app.translate_file(
                 args.input, 
                 args.output, 
-                args.language, 
+                source_language, 
                 not args.no_report
             )
             
@@ -416,4 +581,3 @@ def main():
 
 if __name__ == '__main__':
     sys.exit(main())
-

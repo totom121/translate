@@ -3,3 +3,57 @@
 2025-06-26 19:29:13,747 - damos_translator.reconstructor - WARNING - chardet not available, using utf-8
 2025-06-26 19:29:24,315 - damos_translator.reconstructor - WARNING - chardet not available, using utf-8
 2025-06-26 19:29:37,915 - damos_translator.reconstructor - WARNING - chardet not available, using utf-8
+2025-06-26 19:53:44,699 - damos_translator.automotive_dictionary - INFO - Loaded german automotive dictionary
+2025-06-26 19:53:44,699 - damos_translator.automotive_dictionary - INFO - Loaded french automotive dictionary
+2025-06-26 19:53:44,700 - damos_translator.automotive_dictionary - INFO - Loaded italian automotive dictionary
+2025-06-26 19:53:44,700 - damos_translator.automotive_dictionary - INFO - Loaded spanish automotive dictionary
+2025-06-26 19:53:44,700 - damos_translator.main - INFO - Starting translation of: your_file.dam
+2025-06-26 19:53:44,703 - damos_translator.main - INFO - Parsing DAMOS file...
+2025-06-26 19:53:44,722 - damos_translator.parser - INFO - Parsing DAMOS file: your_file.dam (74411 lines)
+2025-06-26 19:53:44,758 - damos_translator.parser - INFO - Found 4901 parameters to translate
+2025-06-26 19:53:44,793 - damos_translator.main - INFO - Found 4901 parameters
+2025-06-26 19:53:44,795 - damos_translator.main - INFO - Translating 4733 descriptions from french to English...
+2025-06-26 19:53:49,394 - damos_translator.main - INFO - Successfully translated 2182 parameters
+2025-06-26 19:53:49,395 - damos_translator.main - INFO - Reconstructing DAMOS file with translations...
+2025-06-26 19:53:49,395 - damos_translator.reconstructor - INFO - Reconstructing DAMOS file: test_french_translation.dam
+2025-06-26 19:53:49,418 - damos_translator.reconstructor - WARNING - chardet not available, using utf-8
+2025-06-26 19:53:49,484 - damos_translator.reconstructor - INFO - Reconstruction complete: 4712/74411 lines translated
+2025-06-26 19:53:49,485 - damos_translator.main - INFO - Creating translation report...
+2025-06-26 19:53:49,493 - damos_translator.reconstructor - INFO - Translation report created: test_french_translation_translation_report.txt
+2025-06-26 19:53:49,493 - damos_translator.main - INFO - Translation completed successfully in 4.79 seconds
+2025-06-26 19:53:58,034 - damos_translator.automotive_dictionary - INFO - Loaded german automotive dictionary
+2025-06-26 19:53:58,035 - damos_translator.automotive_dictionary - INFO - Loaded french automotive dictionary
+2025-06-26 19:53:58,036 - damos_translator.automotive_dictionary - INFO - Loaded italian automotive dictionary
+2025-06-26 19:53:58,036 - damos_translator.automotive_dictionary - INFO - Loaded spanish automotive dictionary
+2025-06-26 19:53:58,037 - damos_translator.main - INFO - Starting translation of: your_file.dam
+2025-06-26 19:53:58,037 - damos_translator.main - INFO - Parsing DAMOS file...
+2025-06-26 19:53:58,056 - damos_translator.parser - INFO - Parsing DAMOS file: your_file.dam (74411 lines)
+2025-06-26 19:53:58,096 - damos_translator.parser - INFO - Found 4901 parameters to translate
+2025-06-26 19:53:58,132 - damos_translator.main - INFO - Found 4901 parameters
+2025-06-26 19:53:58,134 - damos_translator.main - INFO - Translating 4733 descriptions from italian to English...
+2025-06-26 19:54:02,401 - damos_translator.main - INFO - Successfully translated 94 parameters
+2025-06-26 19:54:02,402 - damos_translator.main - INFO - Reconstructing DAMOS file with translations...
+2025-06-26 19:54:02,402 - damos_translator.reconstructor - INFO - Reconstructing DAMOS file: test_italian_translation.dam
+2025-06-26 19:54:02,427 - damos_translator.reconstructor - WARNING - chardet not available, using utf-8
+2025-06-26 19:54:02,481 - damos_translator.reconstructor - INFO - Reconstruction complete: 4669/74411 lines translated
+2025-06-26 19:54:02,481 - damos_translator.main - INFO - Creating translation report...
+2025-06-26 19:54:02,484 - damos_translator.reconstructor - INFO - Translation report created: test_italian_translation_translation_report.txt
+2025-06-26 19:54:02,485 - damos_translator.main - INFO - Translation completed successfully in 4.45 seconds
+2025-06-26 19:54:11,670 - damos_translator.automotive_dictionary - INFO - Loaded german automotive dictionary
+2025-06-26 19:54:11,671 - damos_translator.automotive_dictionary - INFO - Loaded french automotive dictionary
+2025-06-26 19:54:11,671 - damos_translator.automotive_dictionary - INFO - Loaded italian automotive dictionary
+2025-06-26 19:54:11,671 - damos_translator.automotive_dictionary - INFO - Loaded spanish automotive dictionary
+2025-06-26 19:54:11,672 - damos_translator.main - INFO - Starting translation of: your_file.dam
+2025-06-26 19:54:11,672 - damos_translator.main - INFO - Parsing DAMOS file...
+2025-06-26 19:54:11,691 - damos_translator.parser - INFO - Parsing DAMOS file: your_file.dam (74411 lines)
+2025-06-26 19:54:11,730 - damos_translator.parser - INFO - Found 4901 parameters to translate
+2025-06-26 19:54:11,766 - damos_translator.main - INFO - Found 4901 parameters
+2025-06-26 19:54:11,768 - damos_translator.main - INFO - Translating 4733 descriptions from spanish to English...
+2025-06-26 19:54:16,514 - damos_translator.main - INFO - Successfully translated 78 parameters
+2025-06-26 19:54:16,514 - damos_translator.main - INFO - Reconstructing DAMOS file with translations...
+2025-06-26 19:54:16,514 - damos_translator.reconstructor - INFO - Reconstructing DAMOS file: test_spanish_translation.dam
+2025-06-26 19:54:16,541 - damos_translator.reconstructor - WARNING - chardet not available, using utf-8
+2025-06-26 19:54:16,620 - damos_translator.reconstructor - INFO - Reconstruction complete: 4669/74411 lines translated
+2025-06-26 19:54:16,621 - damos_translator.main - INFO - Creating translation report...
+2025-06-26 19:54:16,625 - damos_translator.reconstructor - INFO - Translation report created: test_spanish_translation_translation_report.txt
+2025-06-26 19:54:16,626 - damos_translator.main - INFO - Translation completed successfully in 4.95 seconds
