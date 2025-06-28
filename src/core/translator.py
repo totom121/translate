@@ -245,7 +245,10 @@ class PureTranslator:
                 # Attempt translation
                 translated_text, confidence = translator.translate(text, source_lang, target_lang)
                 
-                if translated_text and confidence >= self.config.min_confidence_threshold:
+                # Use lower threshold for local translator since it's our fallback
+                min_threshold = 0.3 if service == TranslationService.LOCAL else self.config.min_confidence_threshold
+                
+                if translated_text and confidence >= min_threshold:
                     processing_time = time.time() - start_time
                     
                     return TranslationResult(
