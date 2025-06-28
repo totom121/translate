@@ -1,0 +1,674 @@
+DAMOS Translation Report
+==================================================
+
+Total parameters: 4733
+Translated parameters: 94
+Translation rate: 2.0%
+
+Detected languages:
+  italian: 4733 parameters (100.0%)
+
+Translation methods:
+  automotive_dictionary: 4733 parameters (100.0%)
+
+Detailed Translations:
+------------------------------
+
+Parameter 186: CDCFPP
+  Original (italian): Codewort CARB: Klopfregelung Offset
+  Translated: Codewort CARB: Klopfregelung offset
+  Method: automotive_dictionary
+  Confidence: 0.25
+  Automotive terms: 1
+
+Parameter 230: CDCMD02
+  Original (italian): Codewort CARB: OBDII Fehler auf Grund eines leeren Tanks
+  Translated: Codewort CARB: OBD-II Fehler auf Grund eines leeren Tanks
+  Method: automotive_dictionary
+  Confidence: 0.11
+  Automotive terms: 2
+
+Parameter 267: CDCURRST
+  Original (italian): Codewort Katalysator-Diagnose im OBDII-Mode (invers: Europa-Mode)
+  Translated: Codewort Katalysator-Diagnose im OBD-II-Mode (invers: Europa-Mode)
+  Method: automotive_dictionary
+  Confidence: 0.00
+  Automotive terms: 2
+
+Parameter 327: CDKDVEN
+  Original (italian): Codewort Kunde:	Klopfregelung Offset
+  Translated: Codewort Kunde:	Klopfregelung offset
+  Method: automotive_dictionary
+  Confidence: 0.25
+  Automotive terms: 1
+
+Parameter 371: CDKKUPPL
+  Original (italian): Codewort Kunde: OBDII Fehler auf Grund eines leeren Tanks
+  Translated: Codewort Kunde: OBD-II Fehler auf Grund eines leeren Tanks
+  Method: automotive_dictionary
+  Confidence: 0.11
+  Automotive terms: 2
+
+Parameter 393: CDKN
+  Original (italian): Codewort Lambdasondenalterungsdiagnose (SHK) im OBDII-Mode (invers: Europa-Mode)
+  Translated: Codewort Lambdasondenalterungsdiagnose (SHK) im OBD-II-Mode (invers: Europa-Mode)
+  Method: automotive_dictionary
+  Confidence: 0.00
+  Automotive terms: 2
+
+Parameter 394: CDKNWKW
+  Original (italian): Codewort Lambdasondenalterungsdiagnose (TP) im OBDII-Mode (invers: Europa-Mode)
+  Translated: Codewort Lambdasondenalterungsdiagnose (TP) im OBD-II-Mode (invers: Europa-Mode)
+  Method: automotive_dictionary
+  Confidence: 0.00
+  Automotive terms: 2
+
+Parameter 395: CDKNWSE
+  Original (italian): Codewort Lambdasondenalterungsdiagnose (tv) im OBDII-Mode (invers: Europa-Mode)
+  Translated: Codewort Lambdasondenalterungsdiagnose (tv) im OBD-II-Mode (invers: Europa-Mode)
+  Method: automotive_dictionary
+  Confidence: 0.00
+  Automotive terms: 2
+
+Parameter 396: CDKNX
+  Original (italian): Codewort LDP-Diagnose im OBDII-Modus (invers: Europa-Modus), CD..=0 -> keine Dia
+  Translated: Codewort LDP-Diagnose im OBD-II-Modus (invers: Europa-Modus), CD..=0 -> keine Dia
+  Method: automotive_dictionary
+  Confidence: 0.00
+  Automotive terms: 2
+
+Parameter 399: CDKRKAZ
+  Original (italian): Codewort Sondendiagnose hinter Kat im OBDII-Mode (invers: Europa-Mode)
+  Translated: Codewort Sondendiagnose hinter Kat im OBD-II-Mode (invers: Europa-Mode)
+  Method: automotive_dictionary
+  Confidence: 0.00
+  Automotive terms: 2
+
+Parameter 400: CDKSCR
+  Original (italian): Codewort Sondendiagnose vor KAT im OBDII-Mode
+  Translated: Codewort Sondendiagnose vor KAT im OBD-II-Mode
+  Method: automotive_dictionary
+  Confidence: 0.00
+  Automotive terms: 2
+
+Parameter 401: CDKSGEEP
+  Original (italian): Codewort Diagnose vertauschte Sonden vor Kat im OBDII-Mode (invers: Europa-Mode)
+  Translated: Codewort Diagnose vertauschte Sonden vor Kat im OBD-II-Mode (invers: Europa-Mode)
+  Method: automotive_dictionary
+  Confidence: 0.00
+  Automotive terms: 2
+
+Parameter 404: CDKSLS
+  Original (italian): Code wort PCV -Ventil vorhanden
+  Translated: Code wort Php -Ventil vorhanden
+  Method: automotive_dictionary
+  Confidence: 0.00
+  Automotive terms: 0
+
+Parameter 405: CDKSLV
+  Original (italian): Euro-Byte fr Diagnose Sekundrluft-System
+  Translated: Euro-byte fr Diagnose Sekundrluft-System
+  Method: automotive_dictionary
+  Confidence: 0.00
+  Automotive terms: 1
+
+Parameter 473: CDTCAT
+  Original (italian): Codewort Tester: Klopfregelung Offset
+  Translated: Codewort Tester: Klopfregelung offset
+  Method: automotive_dictionary
+  Confidence: 0.25
+  Automotive terms: 2
+
+Parameter 517: CDTHSH2
+  Original (italian): Codewort Tester: OBDII Fehler auf Grund eines leeren Tanks
+  Translated: Codewort Tester: OBD-II Fehler auf Grund eines leeren Tanks
+  Method: automotive_dictionary
+  Confidence: 0.11
+  Automotive terms: 3
+
+Parameter 626: CLAAGRF
+  Original (italian): Fehlerklasse: Klopfreglung Offset
+  Translated: Fehlerklasse: Klopfreglung offset
+  Method: automotive_dictionary
+  Confidence: 0.33
+  Automotive terms: 1
+
+Parameter 714: CLALM
+  Original (italian): Checksumme fr GRA-Can-Botschaft
+  Translated: Checksumme fr GRA-CAN-Botschaft
+  Method: automotive_dictionary
+  Confidence: 0.00
+  Automotive terms: 1
+
+Parameter 966: CWFA241
+  Original (italian): Codewort fr Steuerung MIL-ON entsprechend OBDII / EOBD
+  Translated: Codewort fr Steuerung MIL-ON entsprechend OBD-II / EOBD
+  Method: automotive_dictionary
+  Confidence: 0.12
+  Automotive terms: 2
+
+Parameter 1013: CWFA44A
+  Original (italian): Codewort Support der VITs $05 und $06 (CVN-Ausgabe) im Mode/Service $09
+  Translated: Codewort Support der VITs $05 und $06 (hpN-Ausgabe) im Mode/Service $09
+  Method: automotive_dictionary
+  Confidence: 0.00
+  Automotive terms: 0
+
+Parameter 1039: CWFGRGABED
+  Original (italian): Codewort zum abschalten bestimmter Scan Tool Modes/Services (Bit=0 ->  Mode aus)
+  Translated: Codewort zum abschalten bestimmter Scan Tool Modes/Services (bit=0 ->  Mode aus)
+  Method: automotive_dictionary
+  Confidence: 0.00
+  Automotive terms: 2
+
+Parameter 1098: CWMDRLKO
+  Original (italian): Offset fr evtmod abhngig von tsges_w bei hoher tans verursacht d. AGR
+  Translated: offset fr evtmod abhngig von tsges_w bei hoher tans verursacht d. AGR
+  Method: automotive_dictionary
+  Confidence: 0.08
+  Automotive terms: 1
+
+Parameter 1110: CWPKAPP
+  Original (italian): frm-Offset-Schwelle (negativ) in Abhngigkeit vom Luftmassenflu
+  Translated: frm-offset-Schwelle (negativ) in Abhngigkeit vom Luftmassenflu
+  Method: automotive_dictionary
+  Confidence: 0.00
+  Automotive terms: 1
+
+Parameter 1111: CWPLGU
+  Original (italian): frm-Offset-Schwelle (negativ): Kontrolle Vorsteuerproblem (Kurztest)
+  Translated: frm-offset-Schwelle (negativ): Kontrolle Vorsteuerproblem (Kurztest)
+  Method: automotive_dictionary
+  Confidence: 0.00
+  Automotive terms: 2
+
+Parameter 1112: CWPWF
+  Original (italian): frm-Offset-Schwelle (positiv) in Abhngigkeit vom Luftmassenflu
+  Translated: frm-offset-Schwelle (positiv) in Abhngigkeit vom Luftmassenflu
+  Method: automotive_dictionary
+  Confidence: 0.00
+  Automotive terms: 1
+
+Parameter 1113: CWRBS
+  Original (italian): frm-Offset-Schwelle (positiv): Kontrolle Vorsteuerproblem (Kurztest)
+  Translated: frm-offset-Schwelle (positiv): Kontrolle Vorsteuerproblem (Kurztest)
+  Method: automotive_dictionary
+  Confidence: 0.00
+  Automotive terms: 2
+
+Parameter 1120: CWSTADAP
+  Original (italian): Schwelle Gemischanteil Tankentlftung zum Setzen Bit "Hohe Beladung"
+  Translated: Schwelle Gemischanteil Tankentlftung zum Setzen bit "Hohe Beladung"
+  Method: automotive_dictionary
+  Confidence: 0.12
+  Automotive terms: 1
+
+Parameter 1141: CWZWVMX
+  Original (italian): Delta-Lambda-Sollwert (Fett) fr Test Schwingungsprfung hinter KAT
+  Translated: Delta-Lambda-Sollwert (Fett) fr test Schwingungsprfung hinter KAT
+  Method: automotive_dictionary
+  Confidence: 0.14
+  Automotive terms: 1
+
+Parameter 1142: CW_AZUE
+  Original (italian): Delta-Lambda-Sollwert (Mager) fr Test Schwingungsprfung hinter KAT
+  Translated: Delta-Lambda-Sollwert (Mager) fr test Schwingungsprfung hinter KAT
+  Method: automotive_dictionary
+  Confidence: 0.14
+  Automotive terms: 1
+
+Parameter 1210: DKRAMX
+  Original (italian): Offset auf indiziertes Motormoment bei sptestem Zndwinkel und ASR-Eingriff
+  Translated: offset auf indiziertes Motormoment bei sptestem Zndwinkel und ASR-Eingriff
+  Method: automotive_dictionary
+  Confidence: 0.11
+  Automotive terms: 2
+
+Parameter 1269: DLURMIN
+  Original (italian): Offset zur Bestimmung der oberen Grenze fr die Solldrehzahlnachfhrung
+  Translated: offset zur Bestimmung der oberen Grenze fr die Solldrehzahlnachfhrung
+  Method: automotive_dictionary
+  Confidence: 0.11
+  Automotive terms: 1
+
+Parameter 1270: DMADFK
+  Original (italian): Einschaltschwelle Drehzahdynamik fr Tip-In Offset auf sptesten Zndwinkel
+  Translated: Einschaltschwelle Drehzahdynamik fr Tip-In offset auf sptesten Zndwinkel
+  Method: automotive_dictionary
+  Confidence: 0.12
+  Automotive terms: 2
+
+Parameter 1314: DMRLSV
+  Original (italian): Offset auf rlmin fr Abschaltung Dashpot
+  Translated: offset auf rlmin fr Abschaltung Dashpot
+  Method: automotive_dictionary
+  Confidence: 0.17
+  Automotive terms: 1
+
+Parameter 1320: DMVERLMN
+  Original (italian): Offset Drucksensor Bremskraftverstrker
+  Translated: offset Drucksensor Bremskraftverstrker
+  Method: automotive_dictionary
+  Confidence: 0.33
+  Automotive terms: 1
+
+Parameter 1322: DMXRDL
+  Original (italian): Offset Drucksensor Ladedruck
+  Translated: offset Drucksensor Ladedruck
+  Method: automotive_dictionary
+  Confidence: 0.33
+  Automotive terms: 1
+
+Parameter 1326: DNABW
+  Original (italian): Offset fr Umrechnung Spannung -> Druck bei Tankdrucksensor
+  Translated: offset fr Umrechnung Spannung -> Druck bei Tankdrucksensor
+  Method: automotive_dictionary
+  Confidence: 0.12
+  Automotive terms: 1
+
+Parameter 1328: DNBURN1
+  Original (italian): Offset Drucksensor Umgebung
+  Translated: offset Drucksensor Umgebung
+  Method: automotive_dictionary
+  Confidence: 0.33
+  Automotive terms: 1
+
+Parameter 1359: DPBKVEBGVS
+  Original (italian): Offset Ansauglufttemperatur -> Umgebungstemperatur
+  Translated: offset Ansauglufttemperatur -> Umgebungstemperatur
+  Method: automotive_dictionary
+  Confidence: 0.25
+  Automotive terms: 1
+
+Parameter 1364: DPBKVP
+  Original (italian): Offset fr Hysterese bei Umschaltung auf verstrktes Signal von DK-Poti 1
+  Translated: offset fr Hysterese bei Umschaltung auf verstrktes Signal von DK-Poti 1
+  Method: automotive_dictionary
+  Confidence: 0.09
+  Automotive terms: 1
+
+Parameter 1442: DUBLBZ
+  Original (italian): temperaturabhngiger Offset des optimalen ZW
+  Translated: temperaturabhngiger offset des optimalen ZW
+  Method: automotive_dictionary
+  Confidence: 0.20
+  Automotive terms: 2
+
+Parameter 1462: DVBABFF
+  Original (italian): min. Temperatur bei der Offset nicht zu DK-Kennlinie bei nmot=0 addiert wird
+  Translated: min. Temperatur bei der offset nicht zu DK-Kennlinie bei nmot=0 addiert wird
+  Method: automotive_dictionary
+  Confidence: 0.08
+  Automotive terms: 1
+
+Parameter 1463: DVEEST
+  Original (italian): Offset fr evtmod abhngig von gefilterter Motortemperatur
+  Translated: offset fr evtmod abhngig von gefilterter Motortemperatur
+  Method: automotive_dictionary
+  Confidence: 0.14
+  Automotive terms: 1
+
+Parameter 1554: FASKIV1
+  Original (italian): Freeze Frame Tabelle: Klopfregelung Offset
+  Translated: Freeze Frame Tabelle: Klopfregelung offset
+  Method: automotive_dictionary
+  Confidence: 0.20
+  Automotive terms: 1
+
+Parameter 1965: FZANSSA1
+  Original (italian): Offset fr Lambdaregelung leicht im fetten Bereich
+  Translated: offset fr Lambdaregelung leicht im fetten Bereich
+  Method: automotive_dictionary
+  Confidence: 0.14
+  Automotive terms: 1
+
+Parameter 1966: FZANSSA2
+  Original (italian): Offset fr Lambdaregelung leicht im fetten Bereich
+  Translated: offset fr Lambdaregelung leicht im fetten Bereich
+  Method: automotive_dictionary
+  Confidence: 0.14
+  Automotive terms: 1
+
+Parameter 2047: KATBFMNT_1_A
+  Original (italian): Offset des optimalen ZW bei AGR-Betrieb
+  Translated: offset des optimalen ZW bei AGR-Betrieb
+  Method: automotive_dictionary
+  Confidence: 0.17
+  Automotive terms: 1
+
+Parameter 2085: KFATMABKA_0_A
+  Original (italian): Offset Lambda-Motor-Soll
+  Translated: offset Lambda-Motor-Soll
+  Method: automotive_dictionary
+  Confidence: 0.50
+  Automotive terms: 1
+
+Parameter 2144: KFDZK
+  Original (italian): Kennfeld fr Offset-Toleranz in Abhngigkeit vom zul. Moment im Befehlstest
+  Translated: Kennfeld fr offset-Toleranz in Abhngigkeit vom zul. Moment im Befehlstest
+  Method: automotive_dictionary
+  Confidence: 0.00
+  Automotive terms: 2
+
+Parameter 2145: KFDZWKG
+  Original (italian): Kennfeld fr Offset-Toleranz in Abhngigkeit vom zulssigen Moment
+  Translated: Kennfeld fr offset-Toleranz in Abhngigkeit vom zulssigen Moment
+  Method: automotive_dictionary
+  Confidence: 0.00
+  Automotive terms: 1
+
+Parameter 2201: KFLDRQ1
+  Original (italian): Offset fr I-Anteilbegrenzung LDRPID
+  Translated: offset fr I-Anteilbegrenzung LDRPID
+  Method: automotive_dictionary
+  Confidence: 0.25
+  Automotive terms: 2
+
+Parameter 2236: KFMDKH_1_A
+  Original (italian): Geschwindigkeits-Offset fr FGR-Regler
+  Translated: Geschwindigkeits-offset fr FGR-Regler
+  Method: automotive_dictionary
+  Confidence: 0.00
+  Automotive terms: 1
+
+Parameter 2237: KFMDKO
+  Original (italian): Geschwindigkeits-Offset fr FGR-Regler
+  Translated: Geschwindigkeits-offset fr FGR-Regler
+  Method: automotive_dictionary
+  Confidence: 0.00
+  Automotive terms: 1
+
+Parameter 2283: KFNWKHLLE
+  Original (italian): Zndwinkelkennfeld Variante 2
+  Translated: Zndwinkelkennfeld variant 2
+  Method: automotive_dictionary
+  Confidence: 0.33
+  Automotive terms: 1
+
+Parameter 2289: KFOELKBI
+  Original (italian): optimaler Zndwinkel Variante 2
+  Translated: optimaler Zndwinkel variant 2
+  Method: automotive_dictionary
+  Confidence: 0.25
+  Automotive terms: 1
+
+Parameter 2333: KFVALDIF
+  Original (italian): Offset Ansauglufttemperatur -> Umgebungstemperatur
+  Translated: offset Ansauglufttemperatur -> Umgebungstemperatur
+  Method: automotive_dictionary
+  Confidence: 0.25
+  Automotive terms: 1
+
+Parameter 2343: KFWEE
+  Original (italian): max. Luftmasse fr Bedingung Adaption/Zusatzdiagnose (16 Bit)
+  Translated: max. Luftmasse fr Bedingung Adaption/Zusatzdiagnose (16 bit)
+  Method: automotive_dictionary
+  Confidence: 0.14
+  Automotive terms: 1
+
+Parameter 2344: KFWEEK
+  Original (italian): max. Luftmasse fr Bedingung Kurztest-Diagnose (16 Bit)
+  Translated: max. Luftmasse fr Bedingung Kurztest-Diagnose (16 bit)
+  Method: automotive_dictionary
+  Confidence: 0.14
+  Automotive terms: 2
+
+Parameter 2345: KFWEEST
+  Original (italian): max. Luftmasse fr Bedingung Diagnose (16 Bit)
+  Translated: max. Luftmasse fr Bedingung Diagnose (16 bit)
+  Method: automotive_dictionary
+  Confidence: 0.14
+  Automotive terms: 1
+
+Parameter 2346: KFWEETM
+  Original (italian): max. Luftmasse fr Bedingung frm-Offset-Messung (16 Bit)
+  Translated: max. Luftmasse fr Bedingung frm-offset-Messung (16 bit)
+  Method: automotive_dictionary
+  Confidence: 0.14
+  Automotive terms: 2
+
+Parameter 2435: KLETAZW_UM
+  Original (italian): Laufgrenze "fett" im Kurz Test
+  Translated: Laufgrenze "fett" im Kurz test
+  Method: automotive_dictionary
+  Confidence: 0.20
+  Automotive terms: 1
+
+Parameter 2437: KLFNWE
+  Original (italian): Laufgrenze "mager" im Kurz Test
+  Translated: Laufgrenze "mager" im Kurz test
+  Method: automotive_dictionary
+  Confidence: 0.20
+  Automotive terms: 1
+
+Parameter 2455: KLTALUST
+  Original (italian): Offset Lambda-Motor-Soll bei inaktiver Lambdaregelung
+  Translated: offset Lambda-Motor-Soll bei inaktiver Lambdaregelung
+  Method: automotive_dictionary
+  Confidence: 0.20
+  Automotive terms: 1
+
+Parameter 2599: LRHIMN
+  Original (italian): min. Luftmasse fr Bedingung Adaption/Zusatzdiagnose (16 Bit)
+  Translated: min. Luftmasse fr Bedingung Adaption/Zusatzdiagnose (16 bit)
+  Method: automotive_dictionary
+  Confidence: 0.14
+  Automotive terms: 1
+
+Parameter 2600: LRHIMX
+  Original (italian): min. Luftmasse fr Bedingung Kurztest-Diagnose (16 Bit)
+  Translated: min. Luftmasse fr Bedingung Kurztest-Diagnose (16 bit)
+  Method: automotive_dictionary
+  Confidence: 0.14
+  Automotive terms: 2
+
+Parameter 2601: LRNST1_T
+  Original (italian): min. Luftmasse fr Bedingung Diagnose (16 Bit)
+  Translated: min. Luftmasse fr Bedingung Diagnose (16 bit)
+  Method: automotive_dictionary
+  Confidence: 0.14
+  Automotive terms: 1
+
+Parameter 2602: LRNST3_T
+  Original (italian): min. Luftmasse fr Bedingung frm-Offset-Messung (16 Bit)
+  Translated: min. Luftmasse fr Bedingung frm-offset-Messung (16 bit)
+  Method: automotive_dictionary
+  Confidence: 0.14
+  Automotive terms: 2
+
+Parameter 2628: MDATRM
+  Original (italian): Massenstrom ber PCV Ventil
+  Translated: Massenstrom ber Php Ventil
+  Method: automotive_dictionary
+  Confidence: 0.00
+  Automotive terms: 0
+
+Parameter 2754: MWNTKB17
+  Original (italian): Begrenzung der Drehzahlvorgabe (CVT-Getriebe)
+  Translated: Begrenzung der Drehzahlvorgabe (hpT-Getriebe)
+  Method: automotive_dictionary
+  Confidence: 0.00
+  Automotive terms: 1
+
+Parameter 2926: NOBMINIT
+  Original (italian): Wiedereinsetzdrehzahl bei CVT-Getriebe
+  Translated: Wiedereinsetzdrehzahl bei hpT-Getriebe
+  Method: automotive_dictionary
+  Confidence: 0.00
+  Automotive terms: 0
+
+Parameter 2943: NSAC_1_A
+  Original (italian): Offset zwischen adaptierter Phasenflanke und Phasenflanke im Start
+  Translated: offset zwischen adaptierter Phasenflanke und Phasenflanke im Start
+  Method: automotive_dictionary
+  Confidence: 0.12
+  Automotive terms: 1
+
+Parameter 2944: NSAFAN
+  Original (italian): Offset zu DPBKVUKKPU bei bettigter Bremse
+  Translated: offset zu DPBKVUKKPU bei bettigter Bremse
+  Method: automotive_dictionary
+  Confidence: 0.17
+  Automotive terms: 1
+
+Parameter 2945: NSC_T_UM
+  Original (italian): Offset zu DPBKVUKNW bei bettigter Bremse
+  Translated: offset zu DPBKVUKNW bei bettigter Bremse
+  Method: automotive_dictionary
+  Confidence: 0.17
+  Automotive terms: 1
+
+Parameter 2946: NSHLL
+  Original (italian): Offset zu DPBKVUKP bei bettigter Bremse
+  Translated: offset zu DPBKVUKP bei bettigter Bremse
+  Method: automotive_dictionary
+  Confidence: 0.17
+  Automotive terms: 1
+
+Parameter 2947: NSKO_0_A
+  Original (italian): Offset zu DPBKVUKPU bei bettigter Bremse
+  Translated: offset zu DPBKVUKPU bei bettigter Bremse
+  Method: automotive_dictionary
+  Confidence: 0.17
+  Automotive terms: 1
+
+Parameter 3094: PUKORRV
+  Original (italian): Offset fr Toleranzgerade f(rl_um) fr rlipf_um in der Funktionsberwachung
+  Translated: offset fr Toleranzgerade f(rl_um) fr rlipf_um in der Funktionsberwachung
+  Method: automotive_dictionary
+  Confidence: 0.11
+  Automotive terms: 1
+
+Parameter 3101: PVDKMN
+  Original (italian): Schwelle: sehr geringe Sekundrluftmasse, ohne Offset
+  Translated: Schwelle: sehr geringe Sekundrluftmasse, ohne offset
+  Method: automotive_dictionary
+  Confidence: 0.17
+  Automotive terms: 1
+
+Parameter 3115: RALEZMAX
+  Original (italian): Schwelle delta Lambda Offset Regler hinter Kat
+  Translated: Schwelle delta Lambda offset Regler hinter Kat
+  Method: automotive_dictionary
+  Confidence: 0.14
+  Automotive terms: 1
+
+Parameter 3458: TAIRCMX
+  Original (italian): Filterzeitkonstante bei Solldrehzahlanhebung CVT
+  Translated: Filterzeitkonstante bei Solldrehzahlanhebung hpT
+  Method: automotive_dictionary
+  Confidence: 0.00
+  Automotive terms: 0
+
+Parameter 3468: TANDSLMN
+  Original (italian): Zeitverzgerung bis das Bit B_fkmsdks wirksam wird
+  Translated: Zeitverzgerung bis das bit B_fkmsdks wirksam wird
+  Method: automotive_dictionary
+  Confidence: 0.14
+  Automotive terms: 1
+
+Parameter 3472: TANH
+  Original (italian): Mezeit Offset Sekundrluftmasse, Phase 3
+  Translated: Mezeit offset Sekundrluftmasse, Phase 3
+  Method: automotive_dictionary
+  Confidence: 0.20
+  Automotive terms: 1
+
+Parameter 3473: TANH1
+  Original (italian): Mezeit Offset sekundrluftmasse, Phase 5
+  Translated: Mezeit offset sekundrluftmasse, Phase 5
+  Method: automotive_dictionary
+  Confidence: 0.20
+  Automotive terms: 1
+
+Parameter 3474: TANHKMMN
+  Original (italian): Mezeit Offset Sekundrluftmasse, Phase 3 bei Kurztest
+  Translated: Mezeit offset Sekundrluftmasse, Phase 3 bei Kurztest
+  Method: automotive_dictionary
+  Confidence: 0.14
+  Automotive terms: 2
+
+Parameter 3485: TASIG
+  Original (italian): Zeit Einschaltverzgerung Bit B_slsoff in Phase 2, 3 und 5 nach
+  Translated: Zeit Einschaltverzgerung bit B_slsoff in Phase 2, 3 und 5 nach
+  Method: automotive_dictionary
+  Confidence: 0.09
+  Automotive terms: 1
+
+Parameter 3853: TMMXRT
+  Original (italian): berwachungszeit Kabelbruch hinter KAT: Funktions Anforderung fr Kurz-Trip-Test
+  Translated: berwachungszeit Kabelbruch hinter KAT: Funktions Anforderung fr Kurz-Trip-test
+  Method: automotive_dictionary
+  Confidence: 0.00
+  Automotive terms: 1
+
+Parameter 3925: TNLEKPVL
+  Original (italian): Fehlersummenzeit: Klopfregelung Offset
+  Translated: Fehlersummenzeit: Klopfregelung offset
+  Method: automotive_dictionary
+  Confidence: 0.33
+  Automotive terms: 1
+
+Parameter 3969: TPFIFOANZ
+  Original (italian): Fehlersummenzeit: OBDII Fehler auf Grund eines leeren Tanks
+  Translated: Fehlersummenzeit: OBD-II Fehler auf Grund eines leeren Tanks
+  Method: automotive_dictionary
+  Confidence: 0.12
+  Automotive terms: 2
+
+Parameter 4027: TSFCGRA
+  Original (italian): Einschaltzeit Tip-In Offset auf sptesten Zndwinkel
+  Translated: Einschaltzeit Tip-In offset auf sptesten Zndwinkel
+  Method: automotive_dictionary
+  Confidence: 0.17
+  Automotive terms: 2
+
+Parameter 4129: TSFTEVE
+  Original (italian): Verzgerungszeit fr Fehler stetige Lambdasonde LSU "Offset"
+  Translated: Verzgerungszeit fr Fehler stetige Lambdasonde LSU "offset"
+  Method: automotive_dictionary
+  Confidence: 0.00
+  Automotive terms: 1
+
+Parameter 4321: TVSATM
+  Original (italian): max. mglicher Offset der temp. UMA-Adaption
+  Translated: max. mglicher offset der temp. UMA-Adaption
+  Method: automotive_dictionary
+  Confidence: 0.17
+  Automotive terms: 1
+
+Parameter 4402: T_NOMKBI23
+  Original (italian): Default Variante fr Variantencodierung
+  Translated: Default variant fr Variantencodierung
+  Method: automotive_dictionary
+  Confidence: 0.25
+  Automotive terms: 1
+
+Parameter 4503: UHSN
+  Original (italian): Offset zu appl. DK-Sollwinkel bei niedrigen Temperaturen
+  Translated: offset zu appl. DK-Sollwinkel bei niedrigen Temperaturen
+  Method: automotive_dictionary
+  Confidence: 0.14
+  Automotive terms: 1
+
+Parameter 4520: UPWGKDMN
+  Original (italian): Festwerteblock: ZW-Offset fr gefhrte Zylinder
+  Translated: Festwerteblock: ZW-offset fr gefhrte Zylinder
+  Method: automotive_dictionary
+  Confidence: 0.00
+  Automotive terms: 1
+
+Parameter 4521: UPWGKDMX
+  Original (italian): ZW-Offset fr gefhrte Zylinder bei KS-Fehler
+  Translated: ZW-offset fr gefhrte Zylinder bei KS-Fehler
+  Method: automotive_dictionary
+  Confidence: 0.00
+  Automotive terms: 1
+
+Parameter 4685: WIMIN
+  Original (italian): Zeitkonstante Wichtung Offset Lambda-Motor-Soll
+  Translated: Zeitkonstante Wichtung offset Lambda-Motor-Soll
+  Method: automotive_dictionary
+  Confidence: 0.25
+  Automotive terms: 1
+

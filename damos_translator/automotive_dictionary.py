@@ -144,7 +144,7 @@ class AutomotiveDictionary:
     
     def get_translation_confidence(self, description: str, source_language: str) -> float:
         """
-        Calculate confidence score for translation based on known terms.
+        Calculate confidence score for translation based on known terms and actual translation changes.
         
         Args:
             description: The description to analyze
@@ -156,6 +156,13 @@ class AutomotiveDictionary:
         if source_language not in self.dictionaries:
             return 0.0
         
+        # Get the actual translation
+        translated = self.translate_description(description, source_language)
+        
+        # If nothing was translated, confidence is low
+        if translated == description:
+            return 0.1
+        
         dictionary = self.dictionaries[source_language]
         words = description.split()
         total_words = len(words)
@@ -164,6 +171,7 @@ class AutomotiveDictionary:
             return 1.0
         
         known_words = 0
+        automotive_terms_found = 0
         
         # Check automotive terms
         for word in words:
@@ -171,18 +179,34 @@ class AutomotiveDictionary:
             
             # Check in automotive terms
             for term in dictionary.get('automotive_terms', {}):
-                if term.lower() == word_clean:
+                if term.lower() == word_clean or term.lower() in description.lower():
                     known_words += 1
+                    automotive_terms_found += 1
                     break
         
         # Check common phrases
+        phrase_matches = 0
         for phrase in dictionary.get('common_phrases', {}):
             if phrase.lower() in description.lower():
-                # Add bonus for phrase matches
+                phrase_matches += 1
                 known_words += len(phrase.split()) * 0.5
         
-        confidence = min(known_words / total_words, 1.0)
-        return confidence
+        # Base confidence on word coverage
+        word_confidence = min(known_words / total_words, 1.0) if total_words > 0 else 0.0
+        
+        # Boost confidence if we have automotive terms or phrases
+        if automotive_terms_found > 0:
+            word_confidence = min(word_confidence + 0.3, 1.0)
+        
+        if phrase_matches > 0:
+            word_confidence = min(word_confidence + 0.2, 1.0)
+        
+        # If we actually translated something, boost confidence significantly
+        translation_ratio = len([w for w in translated.split() if w not in description.split()]) / max(len(translated.split()), 1)
+        if translation_ratio > 0.1:  # If more than 10% of words were translated
+            word_confidence = min(word_confidence + 0.4, 1.0)
+        
+        return word_confidence
     
     def add_custom_term(self, source_language: str, term: str, translation: str):
         """
@@ -264,4 +288,3 @@ class AutomotiveDictionary:
         # Sort by similarity score (descending) and return top results
         similarities.sort(key=lambda x: x[2], reverse=True)
         return similarities[:max_results]
-

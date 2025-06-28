@@ -50,8 +50,17 @@ python translate_damos.py your_file.dam
 # Specify output file
 python translate_damos.py your_file.dam -o translated_file.dam
 
-# Specify source language
+# Manual language selection
 python translate_damos.py your_file.dam -l german -o translated_file.dam
+python translate_damos.py your_file.dam -l french -o translated_file.dam
+python translate_damos.py your_file.dam -l italian -o translated_file.dam
+python translate_damos.py your_file.dam -l spanish -o translated_file.dam
+
+# Interactive language selection
+python translate_damos.py your_file.dam --interactive
+
+# List all supported languages
+python translate_damos.py --list-languages
 ```
 
 #### Batch Translation
@@ -107,12 +116,62 @@ results = app.translate_batch(
 
 - **German** 🇩🇪 - Comprehensive automotive dictionary with 500+ terms
 - **French** 🇫🇷 - Basic automotive terminology support
-- **Italian** 🇮🇹 - Basic automotive terminology support  
+- **Italian** ���🇹 - Basic automotive terminology support  
 - **Spanish** 🇪🇸 - Basic automotive terminology support
 
 ### Target Language
 
 - **English** 🇺🇸 - All translations are to English
+
+### Manual Language Selection
+
+The translator supports multiple ways to specify the source language:
+
+1. **Auto-Detection** (default): `python translate_damos.py file.dam`
+2. **Manual Selection**: `python translate_damos.py file.dam -l german`
+3. **Interactive Mode**: `python translate_damos.py file.dam --interactive`
+4. **List Languages**: `python translate_damos.py --list-languages`
+
+#### Interactive Mode Example
+
+```bash
+$ python translate_damos.py your_file.dam --interactive
+
+🌍 Interactive Language Selection
+========================================
+
+Available languages:
+  1. 🔍 Auto-Detection
+     Let the system detect the language automatically
+
+  2. 🇩🇪 German
+     Comprehensive automotive dictionary (500+ terms)
+
+  3. 🇫🇷 French
+     Comprehensive automotive dictionary (200+ terms)
+
+  4. 🇮🇹 Italian
+     Comprehensive automotive dictionary (200+ terms)
+
+  5. 🇪🇸 Spanish
+     Comprehensive automotive dictionary (200+ terms)
+
+Select language (1-5) or 'q' to quit: 2
+
+✅ Selected: 🇩🇪 German
+   Comprehensive automotive dictionary (500+ terms)
+
+📚 Sample automotive terms in German:
+   • Abgastemperatur → exhaust gas temperature
+   • Katalysator → catalytic converter
+   • Lambdasonde → lambda sensor
+   • Drosselklappe → throttle valve
+   • Motortemperatur → engine temperature
+
+📊 Dictionary contains 500+ total entries
+
+Confirm selection? (y/n): y
+```
 
 ## Automotive Terminology
 
@@ -372,4 +431,3 @@ For issues, questions, or contributions:
 ---
 
 **Note**: This translator is designed for automotive development professionals working with DAMOS files. Always validate translated files with your automotive development tools before use in production environments.
-
