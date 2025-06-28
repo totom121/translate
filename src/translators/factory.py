@@ -8,7 +8,6 @@ from .base import BaseTranslator
 from .google_translator import GoogleTranslator
 from .deepl_translator import DeepLTranslator
 from .azure_translator import AzureTranslator
-from .libre_translator import LibreTranslator
 from .local_translator import LocalTranslator
 
 class TranslatorFactory:
@@ -18,7 +17,6 @@ class TranslatorFactory:
         TranslationService.GOOGLE: GoogleTranslator,
         TranslationService.DEEPL: DeepLTranslator,
         TranslationService.AZURE: AzureTranslator,
-        TranslationService.LIBRE: LibreTranslator,
         TranslationService.LOCAL: LocalTranslator,
     }
     
@@ -57,4 +55,3 @@ class TranslatorFactory:
             translator_class: Translator class to register
         """
         cls._translators[service] = translator_class
-

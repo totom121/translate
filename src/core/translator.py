@@ -89,20 +89,33 @@ class PureTranslator:
         """Initialize available translation services."""
         self.available_services = []
         
-        # Try to initialize each service
-        for service in [self.config.primary_service] + self.config.fallback_services:
-            try:
-                translator = self.translator_factory.create_translator(service, self.config)
-                if translator.is_available():
-                    self.available_services.append(service)
-                    self.logger.info(f"Initialized translation service: {service.value}")
-            except Exception as e:
-                self.logger.warning(f"Failed to initialize {service.value}: {e}")
+        # Only try to initialize the primary service first
+        try:
+            translator = self.translator_factory.create_translator(self.config.primary_service, self.config)
+            if translator.is_available():
+                self.available_services.append(self.config.primary_service)
+                self.logger.info(f"Initialized primary translation service: {self.config.primary_service.value}")
+            else:
+                self.logger.warning(f"Primary service {self.config.primary_service.value} not available")
+        except Exception as e:
+            self.logger.warning(f"Failed to initialize primary service {self.config.primary_service.value}: {e}")
+        
+        # Only add fallback services if primary failed
+        if not self.available_services:
+            for service in self.config.fallback_services:
+                try:
+                    translator = self.translator_factory.create_translator(service, self.config)
+                    if translator.is_available():
+                        self.available_services.append(service)
+                        self.logger.info(f"Initialized fallback translation service: {service.value}")
+                        break  # Only use first available fallback
+                except Exception as e:
+                    self.logger.warning(f"Failed to initialize fallback {service.value}: {e}")
         
         if not self.available_services:
             raise RuntimeError("No translation services available")
         
-        self.logger.info(f"Available translation services: {[s.value for s in self.available_services]}")
+        self.logger.info(f"Using translation service: {self.available_services[0].value}")
     
     def translate(self, text: str, source_lang: str = None, target_lang: str = None) -> TranslationResult:
         """
@@ -373,4 +386,3 @@ class PureTranslator:
                 }
         
         return health_status
-

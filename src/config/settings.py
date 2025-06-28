@@ -12,7 +12,6 @@ class TranslationService(Enum):
     GOOGLE = "google"
     DEEPL = "deepl"
     AZURE = "azure"
-    LIBRE = "libre"
     LOCAL = "local"
 
 class SourceLanguage(Enum):
@@ -28,7 +27,7 @@ class TranslationConfig:
     """Translation configuration settings."""
     
     # Primary translation service
-    primary_service: TranslationService = TranslationService.GOOGLE
+    primary_service: TranslationService = TranslationService.DEEPL
     
     # Fallback services (in order of preference)
     fallback_services: List[TranslationService] = None
@@ -65,9 +64,8 @@ class TranslationConfig:
         """Initialize default fallback services if not provided."""
         if self.fallback_services is None:
             self.fallback_services = [
-                TranslationService.DEEPL,
+                TranslationService.GOOGLE,
                 TranslationService.AZURE,
-                TranslationService.LIBRE,
                 TranslationService.LOCAL
             ]
         
@@ -128,8 +126,7 @@ def get_available_services() -> List[TranslationService]:
     if translation_config.azure_api_key:
         available.append(TranslationService.AZURE)
     
-    # LibreTranslate and Local are always available
-    available.extend([TranslationService.LIBRE, TranslationService.LOCAL])
+    # Local is always available
+    available.append(TranslationService.LOCAL)
     
     return available
-

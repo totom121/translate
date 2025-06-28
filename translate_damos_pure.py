@@ -331,9 +331,9 @@ def create_argument_parser() -> argparse.ArgumentParser:
                        default='auto', help='Source language (default: auto-detect)')
     
     # Translation service arguments
-    parser.add_argument('--service', choices=['google', 'deepl', 'azure', 'libre', 'local'],
-                       help='Primary translation service to use')
-    parser.add_argument('--fallback', nargs='+', choices=['google', 'deepl', 'azure', 'libre', 'local'],
+    parser.add_argument('--service', choices=['google', 'deepl', 'azure', 'local'],
+                       default='deepl', help='Primary translation service to use (default: deepl)')
+    parser.add_argument('--fallback', nargs='+', choices=['google', 'deepl', 'azure', 'local'],
                        help='Fallback translation services')
     
     # Processing arguments
@@ -462,4 +462,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
