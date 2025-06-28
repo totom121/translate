@@ -10,6 +10,7 @@ import re
 from typing import Dict, List, Optional, Tuple, Any
 from .automotive_dictionary import AutomotiveDictionary
 from .language_detector import LanguageDetector
+from .simple_translator import SimpleTranslator
 
 class AutomotiveTranslator:
     """
@@ -20,6 +21,7 @@ class AutomotiveTranslator:
         self.logger = logging.getLogger(__name__)
         self.automotive_dict = AutomotiveDictionary()
         self.language_detector = LanguageDetector()
+        self.simple_translator = SimpleTranslator()
         self.use_external_api = use_external_api
         
         # Translation cache to avoid repeated translations
@@ -31,7 +33,8 @@ class AutomotiveTranslator:
             'dictionary_hits': 0,
             'api_calls': 0,
             'cache_hits': 0,
-            'failed_translations': 0
+            'failed_translations': 0,
+            'base_translations': 0
         }
     
     def translate_description(self, description: str, source_language: Optional[str] = None) -> Dict[str, Any]:
@@ -83,34 +86,19 @@ class AutomotiveTranslator:
             self.translation_cache[cache_key] = result
             return result
         
-        # Try automotive dictionary translation first
-        dict_translation = self.automotive_dict.translate_description(description, source_language)
-        automotive_confidence = self.automotive_dict.get_translation_confidence(description, source_language)
-        
-        # Count automotive terms found
-        automotive_terms_found = self._count_automotive_terms(description, source_language)
+        # Use simple rule-based translator for full translation with automotive enhancement
+        translation_result = self.simple_translator.translate_text(description, source_language)
         
         result = {
             'original': description,
-            'translated': dict_translation,
+            'translated': translation_result['translated'],
             'source_language': source_language,
-            'confidence': automotive_confidence,
-            'method': 'automotive_dictionary',
-            'automotive_terms_found': automotive_terms_found
+            'confidence': translation_result['confidence'],
+            'method': translation_result['method'],
+            'automotive_terms_found': translation_result.get('rules_applied', 0)
         }
         
-        # If dictionary translation has low confidence and external API is enabled, try fallback
-        if automotive_confidence < 0.5 and self.use_external_api:
-            api_translation = self._translate_with_external_api(description, source_language)
-            if api_translation:
-                # Combine dictionary and API translations
-                combined_translation = self._combine_translations(
-                    dict_translation, api_translation, description, source_language
-                )
-                result['translated'] = combined_translation
-                result['method'] = 'combined_dictionary_api'
-                result['confidence'] = min(automotive_confidence + 0.3, 1.0)
-                self.stats['api_calls'] += 1
+        self.stats['base_translations'] += 1
         
         if result['translated'] != description:
             self.stats['dictionary_hits'] += 1
@@ -307,4 +295,3 @@ class AutomotiveTranslator:
         )
         
         return assessment
-
